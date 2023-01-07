@@ -950,8 +950,13 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   accels @32 :List(Float32);
   speeds @33 :List(Float32);
   jerks @34 :List(Float32);
+  visionTurnControllerState @36 :VisionTurnControllerState;
+  visionTurnSpeed @37 :Float32;
 
   solverExecutionTime @35 :Float32;
+  e2eIsBlended @38 :Bool;
+  visionCurrentLatAcc @39 :Float32;
+  visionMaxPredLatAcc @40 :Float32;
 
   enum LongitudinalPlanSource {
     cruise @0;
@@ -959,6 +964,7 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
     lead1 @2;
     lead2 @3;
     e2e @4;
+    turn @5;
   }
 
   # deprecated
@@ -994,15 +1000,22 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
     x @0 :List(Float32);
     y @1 :List(Float32);
   }
+
+  enum VisionTurnControllerState { 
+    disabled @0; # No predicted substantial turn on vision range or feature disabled.
+    entering @1; # A subsantial turn is predicted ahead, adapting speed to turn comfort levels.
+    turning @2; # Actively turning. Managing acceleration to provide a roll on turn feeling.
+    leaving @3; # Road ahead straightens. Start to allow positive acceleration.
+  }
 }
 
 struct LateralPlan @0xe1e9318e2ae8b51e {
   modelMonoTime @31 :UInt64;
-  laneWidthDEPRECATED @0 :Float32;
-  lProbDEPRECATED @5 :Float32;
-  rProbDEPRECATED @7 :Float32;
+  laneWidth @0 :Float32;
+  lProb @5 :Float32;
+  rProb @7 :Float32;
   dPathPoints @20 :List(Float32);
-  dProbDEPRECATED @21 :Float32;
+  dProb @21 :Float32;
 
   mpcSolutionValid @9 :Bool;
   desire @17 :Desire;
@@ -1016,6 +1029,8 @@ struct LateralPlan @0xe1e9318e2ae8b51e {
   curvatureRates @28 :List(Float32);
 
   solverExecutionTime @30 :Float32;
+  dynamicLaneProfile @32 :Bool;
+  standstillElapsed @33 :Float32;
 
   enum Desire {
     none @0;
