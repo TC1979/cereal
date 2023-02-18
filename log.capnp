@@ -954,9 +954,9 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   visionTurnSpeed @37 :Float32;
 
   solverExecutionTime @35 :Float32;
-  e2eIsBlended @38 :Bool;
-  visionCurrentLatAcc @39 :Float32;
-  visionMaxPredLatAcc @40 :Float32;
+  visionCurrentLatAcc @38 :Float32;
+  visionMaxPredLatAcc @39 :Float32;
+  # e2eIsBlended @40 :Bool;
 
   enum LongitudinalPlanSource {
     cruise @0;
