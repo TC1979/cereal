@@ -1020,6 +1020,8 @@ struct LateralPlan @0xe1e9318e2ae8b51e {
   rProb @7 :Float32;
   dPathPoints @20 :List(Float32);
   dProb @21 :Float32;
+  dPathWLinesX @34 :List(Float32);
+  dPathWLinesY @35 :List(Float32);
 
   mpcSolutionValid @9 :Bool;
   desire @17 :Desire;
