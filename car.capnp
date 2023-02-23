@@ -115,7 +115,8 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     controlsdLagging @112;
     resumeBlocked @113;
     followDistanceAdjustmentDisabled @116;
-
+    atlEngageSound @117;
+    atlDisengageSound @118;
     radarCanErrorDEPRECATED @15;
     communityFeatureDisallowedDEPRECATED @62;
     radarCommIssueDEPRECATED @67;
