@@ -1127,6 +1127,7 @@ struct LiveLocationKalman {
   deviceStable @22 :Bool = true;
   timeSinceReset @23 :Float64;
   excessiveResets @24 :Bool;
+  timeToFirstFix @25 :Float32;
 
   enum Status {
     uninitialized @0;
@@ -1214,7 +1215,7 @@ struct GnssMeasurements {
     type @2 :EphemerisType;
     source @3 :EphemerisSource;
   }
-  
+
   struct CorrectedMeasurement {
     constellationId @0 :ConstellationId;
     svId @1 :UInt8;
@@ -1255,7 +1256,7 @@ struct GnssMeasurements {
     glonassIacUltraRapid @2;
     qcom @3;
   }
-  
+
   enum EphemerisSource {
     gnssChip @0;
     internet @1;
@@ -1274,7 +1275,7 @@ struct UbloxGnss {
     glonassEphemeris @5 :GlonassEphemeris;
     satReport @6 :SatReport;
   }
-  
+
   struct SatReport {
     #received time of week in gps time in seconds and gps week
     iTow @0 :UInt32;
@@ -1489,7 +1490,7 @@ struct UbloxGnss {
     p4 @27 :UInt8;
 
     freqNumDEPRECATED @28 :UInt32;
-    
+
     n4 @29 :UInt8;
     nt @30 :UInt16;
     freqNum @31 :Int16;
