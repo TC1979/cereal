@@ -218,6 +218,8 @@ struct CarState {
 
   # TOP
   distanceLines @46 :UInt8; # KRKeegan toyota distance lines
+  adjustableFollowCar @47 :Bool;
+  steeringWheelCar @48 :Bool;
 
   struct WheelSpeeds {
     # optional wheel speeds
