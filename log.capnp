@@ -1978,6 +1978,15 @@ struct LiveMapDataDEPRECATED {
   mapValid @11 :Bool;
 }
 
+struct LiveMapData {
+  speedLimitValid @0 :Bool;
+  speedLimit @1 :Float32;
+  speedLimitAheadValid @2 :Bool;
+  speedLimitAhead @3 :Float32;
+  speedLimitAheadDistance @4 :Float32;
+  currentRoadName @5 :Text;
+}
+
 struct CameraOdometry {
   frameId @4 :UInt32;
   timestampEof @5 :UInt64;
@@ -2167,6 +2176,7 @@ struct Event {
     modelV2 @75 :ModelDataV2;
     driverStateV2 @92 :DriverStateV2;
     navModel @104 :NavModelData;
+    liveMapData @107: LiveMapData;
 
     # camera stuff, each camera state has a matching encode idx
     roadCameraState @2 :FrameData;
