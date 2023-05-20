@@ -1994,6 +1994,12 @@ struct LiveMapData {
   speedLimitAhead @3 :Float32;
   speedLimitAheadDistance @4 :Float32;
   currentRoadName @5 :Text;
+  lastGpsLatitude @6 :Float64;
+  lastGpsLongitude @7 :Float64;
+  lastGpsSpeed @8 :Float32;
+  lastGpsBearingDeg @9 :Float32;
+  lastGpsAccuracy @10 :Float32;
+  lastGpsBearingAccuracyDeg @11 :Float32;
 }
 
 struct CameraOdometry {
