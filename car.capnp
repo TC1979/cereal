@@ -220,14 +220,14 @@ struct CarState {
   charging @43 :Bool;
 
   # TOP
-  distanceLines @46 :UInt8; # KRKeegan toyota distance lines
-  adjustableFollowCar @47 :Bool;
-  steeringWheelCar @48 :Bool;
-  rightBlindspotD1 @49 :Float32;
-  rightBlindspotD2 @50 :Float32;
-  leftBlindspotD1 @51 :Float32;
-  leftBlindspotD2 @52 :Float32;
-  blindspotside @53 :Float32;
+  distanceLines @47 :UInt8; # KRKeegan toyota distance lines
+  adjustableFollowCar @48 :Bool;
+  steeringWheelCar @49 :Bool;
+  rightBlindspotD1 @50 :Float32;
+  rightBlindspotD2 @51 :Float32;
+  leftBlindspotD1 @52 :Float32;
+  leftBlindspotD2 @53 :Float32;
+  blindspotside @54 :Float32;
 
   struct WheelSpeeds {
     # optional wheel speeds
