@@ -608,7 +608,7 @@ struct LiveCalibrationData {
   calStatusDEPRECATED @1 :Int8;
   warpMatrix2DEPRECATED @5 :List(Float32);
   warpMatrixBigDEPRECATED @6 :List(Float32);
-  
+
   enum Status {
     uncalibrated @0;
     calibrated @1;
