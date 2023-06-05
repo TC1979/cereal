@@ -1995,7 +1995,17 @@ struct LiveMapDataDEPRECATED {
 struct LiveMapData {
   speedLimitValid @0 :Bool;
   speedLimit @1 :Float32;
-  currentRoadName @2 :Text;
+  speedLimitAheadValid @2 :Bool;
+  speedLimitAhead @3 :Float32;
+  speedLimitAheadDistance @4 :Float32;
+  lastGpsTimestamp @5 :Int64;  # Milliseconds since January 1, 1970.
+  currentRoadName @6 :Text;
+  lastGpsLatitude @7 :Float64;
+  lastGpsLongitude @8 :Float64;
+  lastGpsSpeed @9 :Float32;
+  lastGpsBearingDeg @10 :Float32;
+  lastGpsAccuracy @11 :Float32;
+  lastGpsBearingAccuracyDeg @12 :Float32;
 }
 
 struct CameraOdometry {
