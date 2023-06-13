@@ -221,7 +221,7 @@ struct CarState {
 
   # TOP
   distanceLines @48 :UInt8; # KRKeegan toyota distance lines
-  adjustableFollowCar @49 :Bool;
+  drivingProfilesViaWheelCar @49 :Bool;
   steeringWheelCar @50 :Bool;
   rightBlindspotD1 @51 :Float32;
   rightBlindspotD2 @52 :Float32;
@@ -503,8 +503,7 @@ struct CarParams {
 
   wheelSpeedFactor @63 :Float32; # Multiplier on wheels speeds to computer actual speeds
 
-  adjustableFollow @72 :Bool;
-  experimentalModeViaWheel @73 :Bool;
+  experimentalModeViaWheel @72 :Bool;
 
   struct SafetyConfig {
     safetyModel @0 :SafetyModel;
