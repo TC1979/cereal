@@ -228,6 +228,8 @@ struct CarState {
   leftBlindspotD1 @53 :Float32;
   leftBlindspotD2 @54 :Float32;
   blindspotside @55 :Float32;
+  adjustableFollowCar @56 :Bool;
+
 
   struct WheelSpeeds {
     # optional wheel speeds
@@ -503,7 +505,8 @@ struct CarParams {
 
   wheelSpeedFactor @63 :Float32; # Multiplier on wheels speeds to computer actual speeds
 
-  experimentalModeViaWheel @72 :Bool;
+  adjustableFollow @72 :Bool;
+  experimentalModeViaWheel @73 :Bool;
 
   struct SafetyConfig {
     safetyModel @0 :SafetyModel;
