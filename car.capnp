@@ -117,6 +117,9 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     vehicleSensorsInvalid @116;
     atlEngageSound @118;
     atlDisengageSound @119;
+    torqueNNFFLoadSuccess @120;
+    torqueNNFFLoadFailure @121;
+    torqueNNFFNotLoaded @122;
 
     radarCanErrorDEPRECATED @15;
     communityFeatureDisallowedDEPRECATED @62;
@@ -437,6 +440,7 @@ struct CarParams {
   carName @0 :Text;
   carFingerprint @1 :Text;
   fuzzyFingerprint @55 :Bool;
+  nnffFingerprint @74 :Text;
 
   notCar @66 :Bool;  # flag for non-car robotics platforms
 

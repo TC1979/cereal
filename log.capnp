@@ -660,6 +660,8 @@ struct ControlsState @0x97ff69c53601abf1 {
   curvature @37 :Float32;  # path curvature from vehicle model
   desiredCurvature @61 :Float32;  # lag adjusted curvatures used by lateral controllers
   desiredCurvatureRate @62 :Float32;
+  desiredCurvatureDebug @66 :Float32;  # lag adjusted curvatures used by lateral controllers
+  desiredCurvatureRateDebug @67 :Float32;
   forceDecel @51 :Bool;
 
   # UI alerts
@@ -748,6 +750,8 @@ struct ControlsState @0x97ff69c53601abf1 {
     saturated @7 :Bool;
     actualLateralAccel @9 :Float32;
     desiredLateralAccel @10 :Float32;
+    nnffInput @11 :List(Float32);
+    errorScaleFactor @12 :Float32;
    }
 
   struct LateralLQRState {
@@ -1979,6 +1983,8 @@ struct LiveTorqueParametersData {
   points @10 :List(List(Float32));
   version @11 :Int32;
   useParams @12 :Bool;
+  kf @13 :Float32;
+  kfRaw @14 :Float32;
 }
 
 struct LiveMapDataDEPRECATED {
