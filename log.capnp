@@ -2001,22 +2001,6 @@ struct LiveMapDataDEPRECATED {
   mapValid @11 :Bool;
 }
 
-struct LiveMapData {
-  speedLimitValid @0 :Bool;
-  speedLimit @1 :Float32;
-  speedLimitAheadValid @2 :Bool;
-  speedLimitAhead @3 :Float32;
-  speedLimitAheadDistance @4 :Float32;
-  lastGpsTimestamp @5 :Int64;  # Milliseconds since January 1, 1970.
-  currentRoadName @6 :Text;
-  lastGpsLatitude @7 :Float64;
-  lastGpsLongitude @8 :Float64;
-  lastGpsSpeed @9 :Float32;
-  lastGpsBearingDeg @10 :Float32;
-  lastGpsAccuracy @11 :Float32;
-  lastGpsBearingAccuracyDeg @12 :Float32;
-}
-
 struct CameraOdometry {
   frameId @4 :UInt32;
   timestampEof @5 :UInt64;
@@ -2208,7 +2192,6 @@ struct Event {
     modelV2 @75 :ModelDataV2;
     driverStateV2 @92 :DriverStateV2;
     navModel @104 :NavModelData;
-    liveMapData @117: LiveMapData;
 
     # camera stuff, each camera state has a matching encode idx
     roadCameraState @2 :FrameData;
@@ -2258,7 +2241,7 @@ struct Event {
     livestreamDriverEncodeData @122 :EncodeData;
 
     # *********** Custom: reserved for forks ***********
-    customReserved0 @107 :Custom.CustomReserved0;
+    liveMapData @107 :Custom.LiveMapData;
     customReserved1 @108 :Custom.CustomReserved1;
     customReserved2 @109 :Custom.CustomReserved2;
     customReserved3 @110 :Custom.CustomReserved3;
