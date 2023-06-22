@@ -1069,8 +1069,16 @@ struct LateralPlan @0xe1e9318e2ae8b51e {
   curvatureRates @28 :List(Float32);
 
   solverExecutionTime @30 :Float32;
-  dynamicLaneProfile @32 :Bool;
-  standstillElapsed @33 :Float32;
+  solverCost @32 :Float32;
+  solverState @33 :SolverState;
+  dynamicLaneProfile @34 :Bool;
+  standstillElapsed @35 :Float32;
+
+
+  struct SolverState {
+    x @0 :List(List(Float32));
+    u @1 :List(Float32);
+  }
 
   enum Desire {
     none @0;
