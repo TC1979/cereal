@@ -224,15 +224,12 @@ struct CarState {
 
   # TOP
   distanceLines @48 :UInt8; # KRKeegan toyota distance lines
-  drivingProfilesViaWheelCar @49 :Bool;
-  steeringWheelCar @50 :Bool;
-  rightBlindspotD1 @51 :Float32;
-  rightBlindspotD2 @52 :Float32;
-  leftBlindspotD1 @53 :Float32;
-  leftBlindspotD2 @54 :Float32;
-  blindspotside @55 :Float32;
-  adjustableFollowCar @56 :Bool;
-
+  steeringWheelCar @49 :Bool;
+  rightBlindspotD1 @50 :Float32;
+  rightBlindspotD2 @51 :Float32;
+  leftBlindspotD1 @52 :Float32;
+  leftBlindspotD2 @53 :Float32;
+  blindspotside @54 :Float32;
 
   struct WheelSpeeds {
     # optional wheel speeds
@@ -440,7 +437,7 @@ struct CarParams {
   carName @0 :Text;
   carFingerprint @1 :Text;
   fuzzyFingerprint @55 :Bool;
-  nnffFingerprint @74 :Text;
+  nnffFingerprint @73 :Text;
 
   notCar @66 :Bool;  # flag for non-car robotics platforms
 
@@ -509,8 +506,7 @@ struct CarParams {
 
   wheelSpeedFactor @63 :Float32; # Multiplier on wheels speeds to computer actual speeds
 
-  adjustableFollow @72 :Bool;
-  experimentalModeViaWheel @73 :Bool;
+  experimentalModeViaWheel @72 :Bool;
 
   struct SafetyConfig {
     safetyModel @0 :SafetyModel;
@@ -549,8 +545,6 @@ struct CarParams {
     kiBP @2 :List(Float32);
     kiV @3 :List(Float32);
     kf @6 :Float32;
-    kdBP @7 :List(Float32);
-    kdV @8 :List(Float32);
     deadzoneBP @4 :List(Float32);
     deadzoneV @5 :List(Float32);
   }
