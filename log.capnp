@@ -994,11 +994,10 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   longitudinalPlanSource @15 :LongitudinalPlanSource;
   processingDelay @29 :Float32;
 
-  # desired distances/speed/accel/jerk over next 2.5s
+  # desired speed/accel/jerk over next 2.5s
   accels @32 :List(Float32);
   speeds @33 :List(Float32);
   jerks @34 :List(Float32);
-  distances @37 :List(Float32);
 
   solverExecutionTime @35 :Float32;
   personality @36 :LongitudinalPersonality;
@@ -1077,7 +1076,6 @@ struct LateralPlan @0xe1e9318e2ae8b51e {
   solverState @33 :SolverState;
   dynamicLaneProfile @34 :Bool;
   standstillElapsed @35 :Float32;
-
 
   struct SolverState {
     x @0 :List(List(Float32));
