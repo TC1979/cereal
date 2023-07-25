@@ -758,6 +758,7 @@ struct ControlsState @0x97ff69c53601abf1 {
     desiredLateralAccel @10 :Float32;
     nnffInput @11 :List(Float32);
     errorScaleFactor @12 :Float32;
+    nnffLog @13 :List(Float32);
    }
 
   struct LateralLQRState {
