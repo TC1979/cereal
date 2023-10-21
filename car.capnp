@@ -120,7 +120,6 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     atlEngageSound @120;
     atlDisengageSound @121;
     torqueNNLoad @122;
-    automaticBrakehold @123;
 
     radarCanErrorDEPRECATED @15;
     communityFeatureDisallowedDEPRECATED @62;
@@ -421,9 +420,6 @@ struct CarControl {
       prompt @6;
       promptRepeat @7;
       promptDistracted @8;
-
-      # AleSato's automatic brakehold
-      engageBrakehold @9;
     }
   }
 
