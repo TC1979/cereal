@@ -669,8 +669,6 @@ struct ControlsState @0x97ff69c53601abf1 {
   curvature @37 :Float32;  # path curvature from vehicle model
   desiredCurvature @61 :Float32;  # lag adjusted curvatures used by lateral controllers
   desiredCurvatureRate @62 :Float32;
-  desiredCurvatureDebug @66 :Float32;  # lag adjusted curvatures used by lateral controllers
-  desiredCurvatureRateDebug @67 :Float32;
   forceDecel @51 :Bool;
 
   # UI alerts
@@ -1070,13 +1068,11 @@ struct UiPlan {
 
 struct LateralPlan @0xe1e9318e2ae8b51e {
   modelMonoTime @31 :UInt64;
-  laneWidth @0 :Float32;
-  lProb @5 :Float32;
-  rProb @7 :Float32;
+  laneWidthDEPRECATED @0 :Float32;
+  lProbDEPRECATED @5 :Float32;
+  rProbDEPRECATED @7 :Float32;
   dPathPoints @20 :List(Float32);
-  dProb @21 :Float32;
-  dPathWLinesX @36 :List(Float32);
-  dPathWLinesY @37 :List(Float32);
+  dProbDEPRECATED @21 :Float32;
 
   mpcSolutionValid @9 :Bool;
   desire @17 :Desire;
@@ -1092,8 +1088,6 @@ struct LateralPlan @0xe1e9318e2ae8b51e {
   solverExecutionTime @30 :Float32;
   solverCost @32 :Float32;
   solverState @33 :SolverState;
-  dynamicLaneProfile @34 :Bool;
-  standstillElapsed @35 :Float32;
 
   struct SolverState {
     x @0 :List(List(Float32));
@@ -2017,8 +2011,6 @@ struct LiveTorqueParametersData {
   points @10 :List(List(Float32));
   version @11 :Int32;
   useParams @12 :Bool;
-  kf @13 :Float32;
-  kfRaw @14 :Float32;
 }
 
 struct LiveMapDataDEPRECATED {
