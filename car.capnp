@@ -511,8 +511,8 @@ struct CarParams {
 
   wheelSpeedFactor @63 :Float32; # Multiplier on wheels speeds to computer actual speeds
 
-  experimentalModeViaWheel @73 :Bool;
-  twilsoncoNNFF @74 :Bool;
+  experimentalModeViaWheel @74 :Bool;
+  twilsoncoNNFF @75 :Bool;
 
   struct SafetyConfig {
     safetyModel @0 :SafetyModel;
