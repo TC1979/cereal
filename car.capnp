@@ -115,10 +115,11 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     locationdPermanentError @118;
     paramsdTemporaryError @50;
     paramsdPermanentError @119;
-    atlEngageSound @120;
-    atlDisengageSound @121;
-    torqueNNLoad @122;
-    automaticBrakehold @123;
+    actuatorsApiUnavailable @120;
+    atlEngageSound @121;
+    atlDisengageSound @122;
+    torqueNNLoad @123;
+    automaticBrakehold @124;
 
     radarCanErrorDEPRECATED @15;
     communityFeatureDisallowedDEPRECATED @62;
@@ -158,6 +159,8 @@ struct CarState {
   # CAN health
   canValid @26 :Bool;       # invalid counter/checksums
   canTimeout @40 :Bool;     # CAN bus dropped out
+  canErrorCounter @48 :UInt32;
+  canRcvTimeout @49 :Bool;
 
   # car speed
   vEgo @1 :Float32;          # best estimate of speed
@@ -224,14 +227,17 @@ struct CarState {
   fuelGauge @41 :Float32; # battery or fuel tank level from 0.0 to 1.0
   charging @43 :Bool;
 
+  # process meta
+  cumLagMs @50 :Float32;
+
   # TOP
-  distanceLines @48 :UInt8; # KRKeegan toyota distance lines
-  steeringWheelCar @49 :Bool;
-  rightBlindspotD1 @50 :Float32;
-  rightBlindspotD2 @51 :Float32;
-  leftBlindspotD1 @52 :Float32;
-  leftBlindspotD2 @53 :Float32;
-  blindspotside @54 :Float32;
+  distanceLines @51 :UInt8; # KRKeegan toyota distance lines
+  steeringWheelCar @52 :Bool;
+  rightBlindspotD1 @53 :Float32;
+  rightBlindspotD2 @54 :Float32;
+  leftBlindspotD1 @55 :Float32;
+  leftBlindspotD2 @56 :Float32;
+  blindspotside @57 :Float32;
 
   struct WheelSpeeds {
     # optional wheel speeds
